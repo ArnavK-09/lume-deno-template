@@ -1,8 +1,8 @@
 metas:
-  site: Lume Deno Template 
-  description: The Multi-purpose Lume Deno Template 
-  lang: en 
-  generator: true 
+  site: Lume Deno Template
+  description: The Multi-purpose Lume Deno Template
+  lang: en
+  generator: true
 
 links:
   - title: Home

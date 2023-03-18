@@ -9,22 +9,24 @@ import sitemap from "lume/plugins/sitemap.ts";
 
 // init site
 const site = lume({
-    src: "./src",
-    components: {
-        variable: "components"
-    }
+  src: "./src",
+  components: {
+    variable: "components",
+  },
 });
 
 // adding plugins
-site.use(tailwindcss({
+site.use(
+  tailwindcss({
     options: {
-        darkMode: "class"
-    }
-}));
+      darkMode: "class",
+    },
+  })
+);
 site.use(postcss());
 site.use(metas());
 site.use(prism());
-site.use(sitemap())
+site.use(sitemap());
 site.use(multilanguage());
 
 // ignored files/directories
@@ -32,18 +34,18 @@ site.ignore("README.md", "CHANGELOG.md");
 
 // global variables | site info
 site.data("siteInfo", {
-    name: "Lume Template",
-    version: 0.1,
-    description: "A Simple template to kickstart your lume site ",
+  name: "Lume Template",
+  version: 0.1,
+  description: "A Simple template to kickstart your lume site ",
 });
 
 // image alts if not prsent
 site.process([".html"], (page) => {
-    page.document?.querySelectorAll("img").forEach((img) => {
-        if (!img.hasAttribute("alt")) {
-            img.setAttribute("alt", "Website image!");
-        }
-    });
+  page.document?.querySelectorAll("img").forEach((img) => {
+    if (!img.hasAttribute("alt")) {
+      img.setAttribute("alt", "Website image!");
+    }
+  });
 });
 
 // export
