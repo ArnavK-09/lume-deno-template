@@ -1,0 +1,19 @@
+metas:
+  site: Lume Deno Template 
+  description: The Multi-purpose Lume Deno Template 
+  lang: en 
+  generator: true 
+
+links:
+  - title: Home
+    title.fr: Maison
+    href: "/"
+    href.fr: "/fr"
+  - title: About
+    title.fr: "à propos"
+    href: "/en/about"
+    href.fr: "/fr/about"
+  - title: Blog
+    title.fr: Blogue
+    href: "/blog"
+    href.fr: "/blogue"

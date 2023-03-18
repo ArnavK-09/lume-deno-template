@@ -1,0 +1,10 @@
+
+navbar !
+
+{% for link in links %}
+  <li>
+    <a href="{{ link.href }}">
+      {{ link.title }}
+    </a>
+  </li>
+{% endfor %}
