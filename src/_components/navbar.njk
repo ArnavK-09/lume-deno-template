@@ -1,25 +1,18 @@
 <!-- component -->
 <header class="header shadow-lg sticky top-0 bg-[#131b1e] flex items-center justify-between px-4 py-02">
-  <!-- logo -->
-    <a href="/">
-        <img class="h-10 rounded-full border border-gray-300 shadow-sm" src="https://deno.land/images/artwork/deno_simpson.png" />
-          </a>
-            <!-- navigation -->
-              <nav class="flex font-semibold  text-sm text-white w-3/5 md:w-full text-center text-center items-center justify-center">
-                  <ul class="flex items-center overflow-x-scroll">
-                        <li class="p-4 border-b-2 border-orange-600 border-opacity-0 hover:border-opacity-100 hover:text-orange-600 duration-200 cursor-pointer">
-                                <a href="">Accueil</a>
-                                      </li>
-                                            <li class="p-4 border-b-2 border-orange-600 border-opacity-0 hover:border-opacity-100 hover:text-orange-600 duration-200 cursor-pointer">
-                                                    <a href="">Produits</a>
-                                                          </li>
-                                                                <li class="p-4 border-b-2 border-orange-600 border-opacity-0 hover:border-opacity-100 hover:text-orange-600 duration-200 cursor-pointer">
-                                                                        <a href="">Collections</a>
-                                                                              </li>
-                                                                                    <li class="p-4 border-b-2 border-orange-600 border-opacity-0 hover:border-opacity-100 hover:text-orange-600 duration-200 cursor-pointer">
-                                                                                            <a href="">Contact</a>
-                                                                                                  </li>
-                                                                                                      </ul>
-                                                                                                        </nav>
-                                                                                                          <a class="rounded-full border border-orange-600 bg-orange-600 py-1 bg-opacity-20 px-1.5 backdrop-brightness-200" href="/search"> 🔍 </a>
-                                                                                                          </header>
+      <!-- logo -->
+      <a href="/">
+            <img class="h-10 rounded-full border border-gray-300 shadow-sm" src="https://deno.land/images/artwork/deno_simpson.png"/>
+      </a>
+      <!-- navigation -->
+      <nav class="flex font-semibold  text-sm text-white w-3/5 md:w-full text-center text-center items-center justify-center">
+            <ul class="flex items-center overflow-x-scroll">
+            {% for link in links %}
+                  <li class="p-4 border-b-2 border-orange-600 border-opacity-0 hover:border-opacity-100 hover:text-orange-600 duration-200 cursor-pointer">
+                        <a href="{{ link.href }}">{{ link.title }}</a>
+                  </li>
+                  {% endfor %}
+            </ul>
+      </nav>
+      <a class="rounded-full border border-orange-600 bg-orange-600 py-1 bg-opacity-20 px-1.5 backdrop-brightness-200" href="/search"> 🔍 </a>
+</header>
