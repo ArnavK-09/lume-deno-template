@@ -1,0 +1,65 @@
+---
+layout: "layouts/base.njk"
+title: Blog title 
+author: Site Owner  
+date: 2022-20-11
+---
+
+<section class="blog p-5 m-2 text-white">
+
+  <div class="w-full ">
+    <div class="flex items-center ">
+      <img  src="https://wallpapercave.com/mwp/wp8450192.jpg" alt="Blog image" class="rounded-lg shadow-md">
+    </div>
+
+    <div class=" w-full mt-5  justify-left ">
+      <h1 class="leading-text tracking-wide font-extrabold text-2xl ">{{ title | title }}
+      </h1>
+      <p class="py-1 text-xs font-extrabold "> By:
+<span class="underline text-orange-600  ">
+          {{ author | trim  }}
+        </span>
+        <span class="mx-1"> | </span>
+   Posted On: 
+
+        
+
+        <span class="underline text-orange-600 ">
+          {{ date | date('HUMAN_DATE') }}
+
+        </span>
+        <span class="mx-1"> | </span>
+                
+  Total Words: 
+<span class="underline text-orange-600">
+          {{ content | wordcount  }}
+        </span>
+
+      </p>
+
+    </div>
+  </div>
+
+  <div class="container mt-3 p-0.5 text-gray-50 font-normal  ">
+    <p>
+      {{ content | safe | trim  }}
+    </p>
+    <hr class="my-5 bg-orange-700 text-orange-700"/>
+    <div class="text-thin ">
+
+Tags: 
+{% for tag in tags %}
+
+        <a href="{{ "/tags/" + tag   }}">
+          <span 
+class="brightness-125 delay-50 transition ease-in-out border border-orange-700/70 mx-1 rounded-lg hover:bg-orange-700/60 p-1 ">
+            {{ tag }}
+          </span>
+        </a>
+
+      {% endfor %}
+    </div>
+
+  </div>
+
+</section>

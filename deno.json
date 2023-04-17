@@ -2,8 +2,7 @@
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
     "build": "deno task lume",
-    "serve": "deno task lume -s",
-    "hook": "deno run --allow-read --allow-write https://deno.land/x/deno_hooks@0.1.0/mod.ts"
+    "serve": "deno task lume -s"
   },
   "imports": {
     "lume/": "https://deno.land/x/lume@v1.15.3/"

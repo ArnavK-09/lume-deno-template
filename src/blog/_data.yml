@@ -1,0 +1,2 @@
+layout: "layouts/blog.njk"
+type: "blogPost"

@@ -1,27 +1,18 @@
 metas:
-  site: Lume Deno Template
+  site: =title | Lume Deno Template
   description: The Multi-purpose Lume Deno Template
   lang: en
   generator: true
 
 links:
   - title: Home
-    title.fr: Maison
     href: "/"
-    href.fr: "/fr"
   - title: About
-    title.fr: "à propos"
-    href: "/en/about"
-    href.fr: "/fr/about"
+    href : "/about"
   - title: Blog
-    title.fr: Blogue
     href: "/blog"
-    href.fr: "/blogue"
   - title: Github
-    title.fr: Github 
-    href: "https://github.com/ArnavK-09/lume-deno-template"
-    href.fr: "https://github.com/ArnavK-09/lume-deno-template"
-
-
+    href: siteInfo.repo 
+    hrdef: "https://github.com/ArnavK-09/lume-deno-template"
 
 layout: "layouts/base.njk"

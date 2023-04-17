@@ -2,3 +2,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* search bar */
+:root {
+    --pagefind-ui-scale: 1;
+    --pagefind-ui-primary: #ea580c;
+    --pagefind-ui-text: #ffffff;
+    --pagefind-ui-background: #131b1e;
+    --pagefind-ui-border: #c2410c;
+    --pagefind-ui-tag: #eeeeee;
+    --pagefind-ui-border-width: 2px;
+    --pagefind-ui-border-radius: 9px;
+    --pagefind-ui-image-border-radius: 7px;
+    --pagefind-ui-image-box-ratio: 3 / 2;
+    --pagefind-ui-font: sans-serif;
+}
+
+/* font family */
+html,
+body {
+    font-family: sans-serif;
+}
+
+/* blog markdown */
+.blog h2 {
+    font-size: 1.125rem;
+    color: #ea580c;
+    font-weight: 700;
+    margin-bottom: 0.125rem;
+    margin-top: 1.25rem;
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
+}
+.mdTitle {
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+}
