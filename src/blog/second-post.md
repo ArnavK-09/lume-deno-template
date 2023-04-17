@@ -6,11 +6,18 @@ tags:
     - "General"
     - "Showcase"
 ---
+
 ## Showcase
->>> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut tempor diam, nec euismod velit. Sed ac sollicitudin leo. Suspendisse magna arcu, tristique non nulla non, gravida feugiat diam. Pellentesque ac tempus enim, sit amet tempor elit. Maecenas et turpis cursus, venenatis lacus ut, cursus felis. Donec vel ipsum sit amet augue fringilla condimentum a eget elit. Integer elementum maximus risus ac convallis.
+
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut tempor diam,
+> nec euismod velit. Sed ac sollicitudin leo. Suspendisse magna arcu, tristique
+> non nulla non, gravida feugiat diam. Pellentesque ac tempus enim, sit amet
+> tempor elit. Maecenas et turpis cursus, venenatis lacus ut, cursus felis.
+> Donec vel ipsum sit amet augue fringilla condimentum a eget elit. Integer
+> elementum maximus risus ac convallis.
 
 ```js
-console.log("Oh Yeah")
+console.log("Oh Yeah");
 ```
 
 we can also do more...
@@ -29,7 +36,4 @@ func main() {
 2. bye
 3. ohh
 
-**Bold boy**
-_Or Not?_
-~~Yeah~~
-
+**Bold boy** _Or Not?_ ~~Yeah~~

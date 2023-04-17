@@ -1,31 +1,25 @@
 <!-- component -->
-<header class="header shadow-lg sticky top-0 bg-[#131b1e] flex items-center justify-between px-4 py-02">
+<header class="header shadow-lg bg-[#131b1e] flex items-center justify-between px-4 py-02">
       <!-- logo -->
       <a href="/">
             <img class="h-10 rounded-full border border-gray-300 shadow-sm" src="/assets/logo.png"/>
       </a>
       <!-- navigation -->
-      <nav class="flex font-semibold  text-sm text-white w-3/5 md:w-full text-center text-center items-center justify-center">
+      <nav class="flex font-semibold text-sm text-white w-3/5 md:w-full text-center text-center items-center justify-center">
             <ul class="flex items-center overflow-x-scroll">
-            {% for link in links %}
-                  <li class="p-4 border-b-2 border-orange-600 border-opacity-0 hover:border-opacity-100 hover:text-orange-600 duration-200 cursor-pointer">
-                        <a href="{{ link.href }}">{{ link.title }}</a>
-                  </li>
+                  {% for link in links %}
+                        <li class="p-4 border-b-2 border-orange-600 border-opacity-0 hover:border-opacity-100 hover:text-orange-600 duration-200 cursor-pointer">
+                              <a href="{{ link.href }}">{{ link.title }}</a>
+                        </li>
                   {% endfor %}
             </ul>
       </nav>
-      <a class="rounded-full border border-orange-600 bg-orange-600 py-1 bg-opacity-20 px-1.5 backdrop-brightness-200" href="/search"> 
-      
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+      <a class="rounded-full border border-orange-600 bg-orange-600 py-1 bg-opacity-20 px-1.5 backdrop-brightness-200" href="/search">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
       class="w-6 h-7 shadow-sm  text-orange-600 font-extrabold  ">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-        </svg>
-        
-      
-      
-      
-      
-       </a>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+            </svg>
+
+      </a>
 </header>
-
-
