@@ -3,12 +3,10 @@ import lume from "lume/mod.ts";
 import tailwindcss from "lume/plugins/tailwindcss.ts";
 import postcss from "lume/plugins/postcss.ts";
 import metas from "lume/plugins/metas.ts";
-import prism from "lume/plugins/prism.ts";
-//import multilanguage from "lume/plugins/multilanguage.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import pageFind from "lume/plugins/pagefind.ts";
 import date from "lume/plugins/date.ts";
-
+import codeHighlight from "lume/plugins/code_highlight.ts";
 // init site
 const site = lume({
   src: "./src",
@@ -27,14 +25,15 @@ site.use(
 );
 site.use(postcss());
 site.use(metas());
-site.use(prism());
+site.use(codeHighlight());
 site.use(date());
 site.use(sitemap());
 site.use(pageFind(
   {
     ui: {
+      resetStyles: false,
           containerId: "search",
-              showImages: false
+        showImages: false
                         },
     }
   
@@ -50,7 +49,7 @@ site.ignore("README.md", "CHANGELOG.md");
 // global variables | site info
 site.data("siteInfo", {
   name: "Lume Template",
-  version: 0.1,
+  version: 0.98,
   repo: "https://github.com/ArnavK-09/lume-deno-template",
   description: "A Simple template to kickstart your lume site ",
 });

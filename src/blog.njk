@@ -1,44 +1,6 @@
-
 {% set postslist = search.pages("type=blogPost", "date=desc") %}
-<section class="py-4 pt-6  px-3 ">
+<section class="py-4  pt-6  px-3 ">
 <h1 class="px-2 text-leading font-extrabold text-white text-4xl mb-3  tracking-wider  "> All Blog Posts...</h1>
-<ul class="py-5 divide-y divide-orange-700 ">
-  {% for post in postslist %}
-  <div class="hover:scale-105 ease-in-out transition  brightness-150 shadow-sm mx-2 p-3 border border-orange-700 rounded-lg  ">
-  <li class="text-white ">
-    <a class="tracking-wide font-extrabold text-2xl" href="{{ post.data.url }}" class="postList-title"{% if entry.data.url == url %} aria-current="page"{% endif %}>
-      {% if post.data.title %}
-        <strong>{{ post.data.title }}</strong>
-      {% else %}
-        <code>{{ post.url }}</code>
-      {% endif %}
-    </a>
-     
-     <p class="mb-7 font-thin text-sm ">
-    <time class="brightness-150 " datetime="{{ post.data.date | date('DATETIME') }}">
-      {{ post.data.date | date('HUMAN_DATE') }}
-    </time>
-    </p>
-
-{% if post.data.tags %}
-    <div class="flex flex-shrink  "><p class="font-semibold tracking-widest" > Tags: </p> 
-
-{% endif %}
-    {% for tag in post.data.tags %}
-    {% set page = search.page("type=tag tag='" + tag + "'") %}
-    {% if page %}
-    <span>
-        <a class="p-1 bg-orange-700/30 border mx-1  border-orange-700 rounded-lg "  
-        href="{{ page.data.url  }}"
-        >{{ tag }}</a>
-         </span>
-         
-    {% endif %}
-    {% endfor %}
-  </li>
-  </div>
-  
-{% endfor %}
-</ul>
-</p>
+ {% include "templates/blogPostList.njk" %}
+</section>
 

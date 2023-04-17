@@ -1,7 +1,7 @@
 ---
 title: First blog post 
 author: "Deno guy"
-date: 2023-04-29
+date: 2023-04-15
 tags:
   - "General"
   - "First Post"
@@ -9,8 +9,7 @@ tags:
 ---
 
 ## Introduction 
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. C
- ras ut tempor diam, nec euismod velit. Sed ac sollicitudin leo. Suspendisse magna arcu, tristique non nulla non, gravida feugiat diam. Pellentesque ac tempus enim, sit amet tempor elit. Maecenas et turpis cursus, venenatis lacus ut, cursus felis. Donec vel ipsum sit amet augue fringilla condimentum a eget elit. Integer elementum maximus risus ac convallis.
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cas ut tempor diam, nec euismod velit. Sed ac sollicitudin leo. Suspendisse magna arcu, tristique non nulla non, gravida feugiat diam. Pellentesque ac tempus enim, sit amet tempor elit. Maecenas et turpis cursus, venenatis lacus ut, cursus felis. Donec vel ipsum sit amet augue fringilla condimentum a eget elit. Integer elementum maximus risus ac convallis.
 
 
 ## Description
