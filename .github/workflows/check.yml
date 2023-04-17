@@ -4,11 +4,11 @@ on:
     push:
         branches:
             - dev
-            - main
+            - template 
     pull_request:
         branches:
             - dev
-            - main
+            - template
 
 jobs:
     build:
