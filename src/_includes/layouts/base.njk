@@ -20,13 +20,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
   </head>
-  <body class="bg-[#131b1e] text-white ">
-    <header>
+  <body class="bg-[#131b1e] h-screen  text-white ">
+    <header class="top-0 absolute sticky ">
       {{ components.navbar() | safe }}
     </header>
     <main>
       {{ content | safe }}
     </main>
-    <footer></footer>
+    <footer class="bottom-0 relative    mt-10 overflow-hidden w-screen ">
+      {{ components.footer() | safe }}
+    </footer>
   </body>
 </html>

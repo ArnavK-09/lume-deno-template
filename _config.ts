@@ -9,58 +9,56 @@ import date from "lume/plugins/date.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
 // init site
 const site = lume({
-  src: "./src",
-  components: {
-    variable: "components",
-  },
+    src: "./src",
+    components: {
+        variable: "components",
+    },
 });
 
 // adding plugins
 site.use(
-  tailwindcss({
-    options: {
-      darkMode: "class",
-    },
-  })
+    tailwindcss({
+        options: {
+            darkMode: "class",
+        },
+    })
 );
 site.use(postcss());
 site.use(metas());
 site.use(codeHighlight());
 site.use(date());
 site.use(sitemap());
-site.use(pageFind(
-  {
-    ui: {
-      resetStyles: false,
-          containerId: "search",
-        showImages: false
-                        },
-    }
-  
-));
+site.use(
+    pageFind({
+        ui: {
+            resetStyles: false,
+            containerId: "search",
+            showImages: false,
+        },
+    })
+);
 
 // static files
 site.copy("assets");
-
 
 // ignored files/directories
 site.ignore("README.md", "CHANGELOG.md");
 
 // global variables | site info
 site.data("siteInfo", {
-  name: "Lume Template",
-  version: 0.98,
-  repo: "https://github.com/ArnavK-09/lume-deno-template",
-  description: "A Simple template to kickstart your lume site ",
+    name: "Lume Template",
+    version: 0.98,
+    repo: "https://github.com/ArnavK-09/lume-deno-template",
+    description: "A Simple template to kickstart your lume site ",
 });
 
 // image alts if not prsent
 site.process([".html"], (page) => {
-  page.document?.querySelectorAll("img").forEach((img) => {
-    if (!img.hasAttribute("alt")) {
-      img.setAttribute("alt", "Website image!");
-    }
-  });
+    page.document?.querySelectorAll("img").forEach((img) => {
+        if (!img.hasAttribute("alt")) {
+            img.setAttribute("alt", "Website image!");
+        }
+    });
 });
 
 // export

@@ -3,13 +3,8 @@ layout: "layouts/base.njk"
 ---
 
 <section class="py-4 pt-6  px-3 ">
-<h1 class="px-2 text-leading font-extrabold text-white text-3xl mb-3  tracking-wider  "> 
+   <h1 class="px-2 text-leading font-extrabold text-white text-3xl mb-3  tracking-wider  "> 
     Tag "{{ tag  }}" </h1>
-
-    {% set postslist = search.pages("'"+tag+"'") %}
-
- {% include "templates/blogPostList.njk" %}
-
-
-
-    </section>
+   {% set postslist = search.pages("'" + tag + "'") %}
+   {% include "templates/blogPostList.njk" %}
+</section>
