@@ -1,0 +1,27 @@
+name: Build Check
+
+on:
+    push:
+        branches:
+            - dev
+            - template 
+    pull_request:
+        branches:
+            - dev
+            - template
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Clone repository
+              uses: actions/checkout@v3
+
+            - name: Setup Deno environment
+              uses: denoland/setup-deno@v1
+              with:
+                  deno-version: v1.x
+
+            - name: Build site
+              run: deno task build
