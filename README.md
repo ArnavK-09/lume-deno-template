@@ -14,6 +14,7 @@ Welcome to Lume Deno Template, a website template built with Deno and Lume frame
 -   **Necessary Plugins Installed**: Pre-installed plugins like Markdown support and code highlighting for seamless content creation.
 -   **Easy to Modify**: Built with Lume, a simple and flexible framework for Deno, making it easy to customize and add new features.
 - **Easy to host**: Already workflow available to host automatically 
+- **Custom Font**: Easy to add your own custom font, default custom font preloaded 
 -   **Not Bloated**: Designed to be lightweight and efficient, ensuring fast loading times and optimal performance.
 
 ## How to Use?
@@ -30,4 +31,4 @@ We welcome contributions from the community to help improve the Lume Deno Templa
 -   Report issues: If you come across any bugs or issues, please report them on the GitHub repository.
 -   Submit pull requests: If you have any improvements or fixes, feel free to submit a pull request. We appreciate your contributions!
 
-##### Thank you for choosing Lume Deno Template for your website project. We hope you find it helpful and enjoy using it! 🐢
+#### Thank you for choosing Lume Deno Template for your website project. We hope you find it helpful and enjoy using it! 🐢
