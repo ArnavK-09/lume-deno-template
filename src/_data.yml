@@ -11,8 +11,7 @@ links:
     href : "/about"
   - title: Blog
     href: "/blog"
-  - title: Github
-    href: siteInfo.repo 
-    hrdef: "https://github.com/ArnavK-09/lume-deno-template"
+  - title: Github 
+    href: "https://github.com/ArnavK-09/lume-deno-template"
 
 layout: "layouts/base.njk"
