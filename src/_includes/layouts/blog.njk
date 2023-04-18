@@ -15,27 +15,22 @@ date: 2022-20-11
       <h1 class="leading-text tracking-wide font-extrabold text-2xl ">{{ title | title }}
       </h1>
       <p class="py-1 text-xs font-extrabold "> By:
-<span class="underline text-orange-600  ">
+       
+       <span class="underline text-orange-600  ">
           {{ author | trim  }}
         </span>
         <span class="mx-1"> | </span>
-   Posted On: 
-
-        
-
+         Posted On:
         <span class="underline text-orange-600 ">
           {{ date | date('HUMAN_DATE') }}
-
-        </span>
+         </span>
         <span class="mx-1"> | </span>
                 
-  Total Words: 
-<span class="underline text-orange-600">
+        Total Words: 
+       <span class="underline text-orange-600">
           {{ content | wordcount  }}
         </span>
-
       </p>
-
     </div>
   </div>
 
@@ -46,16 +41,13 @@ date: 2022-20-11
     <hr class="my-5 bg-orange-700 text-orange-700"/>
     <div class="text-thin ">
 
-Tags: 
-{% for tag in tags %}
-
+     Tags: 
+      {% for tag in tags %}
         <a href="{{ "/tags/" + tag   }}">
-          <span 
-class="brightness-125 delay-50 transition ease-in-out border border-orange-700/70 mx-1 rounded-lg hover:bg-orange-700/60 p-1 ">
+          <span class="brightness-125 delay-50 transition ease-in-out border border-orange-700/70 mx-1 rounded-lg hover:bg-orange-700/60 p-1 ">
             {{ tag }}
           </span>
         </a>
-
       {% endfor %}
     </div>
 

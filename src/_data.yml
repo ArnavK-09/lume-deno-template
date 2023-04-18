@@ -1,5 +1,5 @@
 metas:
-  site: =title | Lume Deno Template
+  site: =title 
   description: The Multi-purpose Lume Deno Template
   lang: en
   generator: true

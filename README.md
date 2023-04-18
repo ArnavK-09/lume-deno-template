@@ -2,7 +2,7 @@
 
 ![Lume Deno Template](https://media.tenor.com/ewBiGLA19fYAAAAd/deno.gif)
 
-[Demo](https://lume-deno-template.herokuapp.com/) | [GitHub Repo](https://github.com/ArnavK-09/lume-deno-template)
+[Demo](https://lume-deno-template.deno.dev/) | [GitHub Repo](https://github.com/ArnavK-09/lume-deno-template)
 
 Welcome to Lume Deno Template, a website template built with Deno and Lume framework! This template is designed to help you kickstart your website project with a sleek and modern theme, SEO-friendly pages, and blog support. With necessary plugins pre-installed, it's easy to customize and modify to fit your specific needs.
 

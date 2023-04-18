@@ -10,6 +10,7 @@ import codeHighlight from "lume/plugins/code_highlight.ts";
 // init site
 const site = lume({
     src: "./src",
+    location: new URL("https://lume-deno-template.deno.dev/"),
     components: {
         variable: "components",
     },
