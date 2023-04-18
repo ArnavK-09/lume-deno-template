@@ -13,7 +13,7 @@ Welcome to Lume Deno Template, a website template built with Deno and Lume frame
 -   **Nice Theme**: Comes with a clean and visually appealing theme that provides a great user experience.
 -   **Necessary Plugins Installed**: Pre-installed plugins like Markdown support and code highlighting for seamless content creation.
 -   **Easy to Modify**: Built with Lume, a simple and flexible framework for Deno, making it easy to customize and add new features.
-- **Easy to host**: Already workflow available to host automatically on github pages
+- **Easy to host**: Already workflow available to host automatically 
 -   **Not Bloated**: Designed to be lightweight and efficient, ensuring fast loading times and optimal performance.
 
 ## How to Use?

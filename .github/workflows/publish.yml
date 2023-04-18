@@ -1,22 +1,21 @@
-name: Publish on GitHub Pages
+name: Publish on Deno Deploy
 
 on:
     push:
         branches:
+            - main
             - template
-
-permissions:
-    contents: read
-    pages: write
-    id-token: write
 
 jobs:
     build:
         runs-on: ubuntu-latest
+        permissions:
+            id-token: write
+            contents: read
 
         steps:
             - name: Clone repository
-              uses: actions/checkout@v3
+              uses: actions/checkout@v2
 
             - name: Setup Deno environment
               uses: denoland/setup-deno@v1
@@ -26,32 +25,9 @@ jobs:
             - name: Build site
               run: deno task build
 
-            - name: Setup Pages
-              uses: actions/configure-pages@v3
-
-            - name: Upload artifact
-              uses: actions/upload-pages-artifact@v1
+            - name: Deploy to Deno Deploy
+              uses: denoland/deployctl@v1
               with:
-                  path: "_site"
-
-
-    deploy:
-    # Add a dependency to the build job
-     needs: build
-
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-     permissions:
-       pages: write      # to deploy to Pages
-       id-token: write   # to verify the deployment originates from an appropriate source
-
-    # Deploy to the github-pages environment
-     environment:
-       name: github-pages
-       url: ${{ steps.deployment.outputs.page_url }}
-
-    # Specify runner + deployment step
-     runs-on: ubuntu-latest
-     steps:
-       - name: Deploy to GitHub Pages
-         id: deployment
-         uses: actions/deploy-pages@v2
+                  project: lume-deno-template
+                  import-map: "./import_map.json"
+                  entrypoint: serve.ts
