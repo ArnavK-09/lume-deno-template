@@ -48,7 +48,7 @@ site.ignore("README.md", "CHANGELOG.md");
 // global variables | site info
 site.data("siteInfo", {
     name: "Lume Template",
-    version: 0.98,
+    version: 1.0,
     repo: "https://github.com/ArnavK-09/lume-deno-template",
     description: "A Simple template to kickstart your lume site ",
 });
