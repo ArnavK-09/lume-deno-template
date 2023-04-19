@@ -5,32 +5,40 @@ author: Site Owner
 date: 2022-20-11
 ---
 
-<section class="blog  justify-center p-2 text-white">
-  <div class="w-full ">
-    <div class="flex items-center justify-center ">
-      <img src="https://wallpapercave.com/mwp/wp8450192.jpg" alt="Blog image" class="rounded-lg shadow-md">
-    </div>
+<section class="blog mt-5 justify-center p-2 text-white">
+  <div class="w-full">
+    {% if image %}
+      <div class="flex items-center justify-center my-1 px-2 md:p-10 ">
+        <img src="{{ image }}" alt="Blog image" class="rounded-lg shadow-sm ring-1 ring-orange-700 aspect-video w-fit md:w-full ">
+      </div>
+    {% endif %}
 
-    <div class="flex flex-col w-full mt-5 px-6 text-left justify-center">
-      <h1 class="leading-text tracking-wide font-extrabold text-2xl md:text-4xl  ">{{ title | title }}
-      </h1>
-      <p class="py-1 text-xs font-extrabold "> By:
-       
-       <span class="underline text-orange-600  ">
-          {{ author | trim  }}
-        </span>
-        <span class="mx-1"> | </span>
+    <div class=" w-full mt-5 px-6 text-left justify-center">
+      <div>
+        <h1 class="leading-text tracking-wider font-extrabold text-3xl md:text-4xl  ">{{ title | title }}
+        </h1>
+      </div>
+      <div>
+        <p class="py-1 gap-x-3  grid md:flex w-full text-xs font-extrabold ">
+          <span> Written by:    
+       <span class="underline text-orange-600">
+              {{ author | trim  }}
+            </span>
+          </span>
+          <span>
          Posted On:
-        <span class="underline text-orange-600 ">
-          {{ date | date('HUMAN_DATE') }}
-         </span>
-        <span class="mx-1"> | </span>
-                
+        <span class="underline text-orange-600">
+              {{ date | date('HUMAN_DATE') }}
+            </span>
+          </span>
+          <span>
         Total Words: 
        <span class="underline text-orange-600">
-          {{ content | wordcount  }}
-        </span>
-      </p>
+              {{ content | wordcount  }}
+            </span>
+          </span>
+        </p>
+      </div>
     </div>
   </div>
 
@@ -39,7 +47,7 @@ date: 2022-20-11
       {{ content | safe | trim  }}
     </p>
     <hr class="my-5 bg-gray-400 text-orange-700"/>
-    <div class="text-thin flex">
+    <div class="text-thin flex flex-wrap gap-y-2 ">
      Tags:
       {% for tag in tags %}
         <a href="{{ "/tags/" + tag   }}">

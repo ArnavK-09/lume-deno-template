@@ -2,6 +2,7 @@
 title: First blog post 
 author: "Deno guy"
 date: 2023-04-15
+image: https://wallpapercave.com/mwp/wp2686493.jpg
 tags:
   - "General"
   - "First Post"

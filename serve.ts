@@ -11,7 +11,7 @@ const server = new Server({
 // custom 404 page
 server.use(notFound({
   root: `${Deno.cwd()}/_site`,
-  page404: "/404.html",
+  page404: "/404/",
 }));
 
 

@@ -1,4 +1,4 @@
-<ul class=" h-full ">
+<ul class="h-full">
   {% for post in postslist %}
     <div class="hover:scale-105 my-4 md:my-6  ease-in-out transition  brightness-150 shadow-sm mx-2 p-3 border border-orange-700 rounded-lg  ">
       <li class="text-white ">
@@ -16,23 +16,21 @@
           </time>
         </p>
 
-        {% if post.data.tags %}
-          <div class="flex flex-shrink  ">
+        <div class="flex flex-wrap gap-y-2 ">
+          {% if post.data.tags.length > 0 %}
             <p class="font-semibold tracking-widest" > Tags: </p>
-
           {% endif %}
           {% for tag in post.data.tags %}
             {% set page = search.page("type=tag tag='" + tag + "'") %}
             {% if page %}
               <span>
-                <a class="p-1 bg-orange-700/30 border mx-1  border-orange-700 rounded-lg "  
-                                                                                                                href="{{ page.data.url  }}"
-                                                                                                                        >{{ tag }}</a>
+                <a class="p-1 bg-orange-700/30 border mx-1  border-orange-700 rounded-lg " href="{{ page.data.url }}" >
+                  {{ tag }}
+                </a>
               </span>
             {% endif %}
           {% endfor %}
         </li>
       </div>
-
     {% endfor %}
   </ul>
