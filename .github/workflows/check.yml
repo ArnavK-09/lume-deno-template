@@ -2,11 +2,9 @@ name: Build Check
 
 on:
     push:
-        branches:
-            - template 
+        branches: ["*"]
     pull_request:
-        branches:
-            - template
+        branches: ["*"]
 
 jobs:
     build:
