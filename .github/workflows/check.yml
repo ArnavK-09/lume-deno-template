@@ -3,11 +3,9 @@ name: Build Check
 on:
     push:
         branches:
-            - dev
             - template 
     pull_request:
         branches:
-            - dev
             - template
 
 jobs:
