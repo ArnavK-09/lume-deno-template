@@ -20,7 +20,7 @@ Welcome to Lume Deno Template, a website template built with Deno and Lume frame
 ## How to Use?
 
 1. Clone the GitHub repo: `git clone https://github.com/ArnavK-09/lume-deno-template.git`
-2. Install Deno: Follow the installation instructions from the Deno website (https://deno.land/#installation)
+2. Install Deno: Follow the installation instructions from the Deno website (https://deno.com/manual@v1.34.3/getting_started/installation)
 3. Navigate to the project directory: `cd lume-deno-template`
 4. Run the website locally: `deno task serve`
 
