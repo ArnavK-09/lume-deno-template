@@ -21,10 +21,10 @@ crossorigin="anonymous"></script>
     <header class="top-0 absolute sticky ">
       {{ components.navbar() | safe }}
     </header>
-    <main>
+    <main class="overflow-x-hidden">
       {{ content | safe }}
     </main>
-    <footer class="bottom-0 relative    mt-10 overflow-hidden w-screen ">
+    <footer class="bottom-0 relative mt-10 overflow-hidden w-screen ">
       {{ components.footer() | safe }}
     </footer>
   </body>
